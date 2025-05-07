@@ -53,7 +53,7 @@ contract DonationTracker {
     }
 
     function getMoneyInTheContract() public view returns (uint256) {
-        require(msg.sender == owner);
+        require(msg.sender == owner, "only the owner can see the balance");
         return address(this).balance;
     }
 }

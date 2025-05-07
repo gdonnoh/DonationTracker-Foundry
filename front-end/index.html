@@ -14,10 +14,10 @@
   <input type="number" id="donationAmount" placeholder="Amount in ETH">
   <button onclick="donate()">Donate</button>
 
-  <button onclick="getMoneyInTheContract()">Get Contract Balance</button>
+  <button id="getContractBalance" onclick="getMoneyInTheContract() " style="display: none;"">Get Contract Balance</button>
   <p id="contractBalance"></p>
 
-  <input type="number" id="withdrawAmount" placeholder="Amount in ETH">
+  <input type="number"  id="withdrawAmount" placeholder="Amount in ETH" style="display: none;">
   <button id="withdrawButton" onclick="ownerWithdraw()" style="display: none;">Preleva fondi</button>
   
 </body>

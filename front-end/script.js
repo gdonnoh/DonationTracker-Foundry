@@ -1,6 +1,6 @@
 let contract;
 let signer;
-const contractAddress = '0xCfB19575A311f14cb7F2D99C61ed77608438D2ee'; // Indirizzo del contratto
+const contractAddress = '0x8C8A01573dfD8b16632dA8c534D888BbC3F5AD77'; // Indirizzo del contratto
 
 const contractABI = [
     {
@@ -53,7 +53,9 @@ async function connectWallet() {
 
         // Mostra il bottone solo se l'utente è owner
         if (userAddress.toLowerCase() === ownerAddress.toLowerCase()) {
+            document.getElementById("withdrawAmount").style.display = "inline-block";
             document.getElementById("withdrawButton").style.display = "inline-block";
+            document.getElementById("getContractBalance").style.display = "inline-block";
         }
 
         console.log("Connesso:", userAddress);
